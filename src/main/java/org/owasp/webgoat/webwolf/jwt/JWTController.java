@@ -42,4 +42,10 @@ public class JWTController {
     var secretKey = formData.getFirst("secretKey");
     return JWTToken.encode(header, payload, secretKey);
   }
+public JWTToken encode22(@RequestBody MultiValueMap<String, String> formData) {
+    var header = formData.getFirst("header");
+    var payload = formData.getFirst("payload");
+    var secretKey = formData.getFirst("secretKey");
+    return JWTToken.encode(header, payload, secretKey);
+  }
 }
